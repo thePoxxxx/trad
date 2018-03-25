@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
+
   <body>
-              <!-- TradingView Widget BEGIN -->
-          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-          <script type="text/javascript">
-          new TradingView.widget({
-            "width": 980,
-            "height": 610,
-            "symbol": "NASDAQ:AAPL",
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "Light",
-            "style": "1",
-            "locale": "en",
-            "toolbar_bg": "#f1f3f6",
-            "enable_publishing": false,
-            "hide_side_toolbar": false,
-            "allow_symbol_change": true,
-            "hideideas": true,
-            "studies": [
-              "BB@tv-basicstudies",
-              "KLTNR@tv-basicstudies"
-            ]
-          });
-          </script>
-          <!-- TradingView Widget END -->
+
+    <!--===================================================================
+    ===== YOU KNOW, JUST THE BORING PART AT THE BEGINNING OF THE CODE =====
+    ====================================================================-->
+
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.8.2/altspace.min.js"></script>
+    <script src="https://pfire.jacobralph.org/transparency.js"></script>
+
+
+      <!--Rayyah will never read this :3  -->
+      <!-- S C E N E - S E T U P -->
+      <a-scene altspace="fullspace: true;">
+
+        <a-assets>
+          <!-- G L T F - L O A D I N G -->
+          <a-asset-item id="Test"      Src="bobba3.glb">       </a-asset-item>
+        </a-assets>
+
+        <!-- T E S T I N G - G L T F - M O D E L -->
+        <a-gltf-model
+              Src="#Test"
+              n-mesh-collider='type: environment; convex: false'>
+        </a-gltf-model>
+
+      </a-scene>
   </body>
 </html>
+        
